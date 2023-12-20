@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calulator</title>
+    <style>
+    body{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      background: rgb(10,6,8);
+background: radial-gradient(circle, rgba(10,6,8,1) 12%, rgba(143,138,131,1) 74%, rgba(143,138,131,1) 75%);
+    }
+    
+    .container{
+      height: 480px;
+      width: 260px;
+      border: solid rgb(12, 12, 12) 4px;
+      background-color: rgb(154, 154, 151);
+      padding: 14px;
+      margin: 140px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    #box{
+      width: 260px;
+      height: 12%;
+      border: 4px solid rgb(52, 50, 50);
+      margin: 4px ;
+      padding: 4px;
+      border-radius: 3px;
+      font-size: 30px;
+    }
+    .boxes{
+      height:55px;
+      width: 65px;
+      border: 3px solid rgb(80, 73, 73);
+      margin: 5px;
+      border-radius: 3px;
+      background-color: gainsboro;
+      font-size: large;
+    }
+    .b{
+      margin: 4px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .boxes:hover{
+      background-color: rgb(26, 25, 25);
+      color: aliceblue;
+    }
+  </style>
+  </head>
+  <body>
+    <div class="container">
+
+      <input id="box" type="text" readonly>
+
+      <div class="b">
+
+        <button class="boxes"
+          onclick="displ=''; document.querySelector('#box').value=displ;">C</button>
+        <button class="boxes"
+          onclick="displ=displ+'1'; document.querySelector('#box').value=displ;">1</button>
+        <button class="boxes"
+          onclick="displ=displ+'2'; document.querySelector('#box').value=displ;">2</button>
+
+        <button class="boxes"
+          onclick="displ=displ+'+'; document.querySelector('#box').value=displ;">+</button>
+        <button class="boxes"
+          onclick="displ=displ+'3'; document.querySelector('#box').value=displ;">3</button>
+        <button class="boxes"
+          onclick="displ=displ+'4'; document.querySelector('#box').value=displ;">4</button>
+
+        <button class="boxes"
+          onclick="displ=displ+'-'; document.querySelector('#box').value=displ;">-</button>
+        <button class="boxes"
+          onclick="displ=displ+'5'; document.querySelector('#box').value=displ;">5</button>
+        <button class="boxes"
+          onclick="displ=displ+'6'; document.querySelector('#box').value=displ;">6</button>
+
+        <button class="boxes"
+          onclick="displ=displ+'*'; document.querySelector('#box').value=displ;">*</button>
+        <button class="boxes"
+          onclick="displ=displ+'7'; document.querySelector('#box').value=displ;">7</button>
+        <button class="boxes"
+          onclick="displ=displ+'8'; document.querySelector('#box').value=displ;">8</button>
+
+        <button class="boxes"
+          onclick="displ=displ+'/'; document.querySelector('#box').value=displ;">/</button>
+        <button class="boxes"
+          onclick=" let result=eval(displ); displ=result; document.querySelector('#box').value=displ;">=</button>
+        <button class="boxes"
+          onclick="displ=displ+'9'; document.querySelector('#box').value=displ;">9</button>
+
+        <tr>
+          <button class="boxes"
+            onclick="displ=displ+'0'; document.querySelector('#box').value=displ;">0</button>
+          <button class="boxes"
+            onclick="displ=displ+'.'; document.querySelector('#box').value=displ;">.</button>
+
+        </div>
+
+      </div>
+
+      <script>
+    let displ= '';
+    document.querySelector('#box').value=displ;
+  </script>
+    </body>
+  </html>
